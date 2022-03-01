@@ -6,7 +6,7 @@ const router = express.Router()
 
 //Rota painel principal
 router.get('/', (req,res)=>{
-    res.send("Página principal do painel ADM")
+    res.render("admin/index")
 })
 
 //Rota de listagem de posts

@@ -4,6 +4,7 @@
     const bodyParser = require('body-parser')
     const app = express()
     const admin = require("./routes/admin")
+    const path = require("path") //Trabalhar com diretórios
     //const mongoose = require('mongoose')
 
 //Configurações
@@ -19,7 +20,9 @@
         app.set('view engine','handlebars')
     //Mongoose
         //Em breve
-    //
+    // Public
+        //Falar pro express que a pasta public está guardando nossos arquivos estáticos
+        app.use(express.static(path.join(__dirname,"public")))
 
 
 //Rotas
