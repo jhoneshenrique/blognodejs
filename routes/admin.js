@@ -15,9 +15,13 @@ router.get('/posts',(req,res)=>{
 })
 
 //Cadastro de categoria
-router.get('/categoria',(req,res)=>{
-    res.send("Página de categorias")
+router.get('/categorias',(req,res)=>{
+    res.render("admin/categorias")
 })
 
+//Rota que dá direto para o formulário
+router.get('/categorias/add',(req,res)=>{
+    res.render("admin/addcategoria")
+})
 
 module.exports = router;
