@@ -20,7 +20,7 @@
     //Middleware
         app.use((req,res,next)=>{
             //variavel global
-            res.locals.success_msg = req.flash("Success_msg")
+            res.locals.success_msg = req.flash("success_msg")
             res.locals.error_msg = req.flash("error_msg")
             next()
         })
